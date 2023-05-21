@@ -79,8 +79,8 @@ Foreach-Object {
     $params = @{
         ScriptName = $ScriptName
         ScriptContent = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes((Get-Content -Path $_.FullName -Raw -Encoding UTF8)))
-        DisplayName = $_.NameString
-        Description = $_.NameString
+        DisplayName = $_.BaseName
+        Description = $_.BaseName
         RunAsAccount = "system"
         EnforceSignatureCheck = "false"
         RunAs32Bit = "false"
